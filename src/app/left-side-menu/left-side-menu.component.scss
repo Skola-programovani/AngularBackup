@@ -1,0 +1,41 @@
+.sidenav-container {
+  height: 10%;
+  width: 2px;
+  padding: 10px 10px;
+
+}
+.mat-list-item-content{
+  background-color: red;
+}
+.sidenav {
+  margin-top: 10px;
+  width: 180px;
+  height: 700px;
+  border: none;
+  border-radius: 14px;
+  background-color: gray;
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+.mat-list-item{
+  position: relative;
+  margin-top: 2%;
+  width: 1px;
+  background-color: red;
+  border: none;
+  border-radius: 4px;
+
+}
+.mat-toolbar{
+  text-align: center;
+}
+

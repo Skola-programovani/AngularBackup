@@ -1,0 +1,33 @@
+<div class="adminTable" ng-init="initFirst()">
+    <mat-table [dataSource]="dataSource">
+        <ng-container matColumnDef="id">
+            <mat-header-cell *matHeaderCellDef>ID</mat-header-cell>
+            <mat-cell *matCellDef="let admin"> {{admin.id}}</mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="username">
+            <mat-header-cell *matHeaderCellDef>USERNAME</mat-header-cell>
+            <mat-cell *matCellDef="let admin"> {{admin.username}}</mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="email">
+            <mat-header-cell *matHeaderCellDef>EMAIL</mat-header-cell>
+            <mat-cell *matCellDef="let admin"> {{admin.email}}</mat-cell>
+
+        </ng-container>
+            <ng-container matColumnDef="delete">
+            <mat-header-cell *matHeaderCellDef></mat-header-cell>
+            <mat-cell *matCellDef="let admin" >
+                 <button mat-button 
+                 [class.selected]="admin === selectedAdmin"
+                 (click)="onClick(admin)"> Delete </button>
+            </mat-cell>
+          </ng-container>
+
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+      
+        </mat-table>
+
+</div>
+        

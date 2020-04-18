@@ -1,0 +1,28 @@
+<div class="addUser">
+    <form [formGroup]="addForm">
+        <mat-form-field appearance="legacy" floatPlaceholder="never">
+            <input matInput placeholder="username" formControlName="username">
+            <mat-error *ngIf="username.invalid">
+                Bruh
+            </mat-error>
+        </mat-form-field>
+        <mat-form-field  appearance="legacy">
+            <input matInput [type]="hide ? 'password' : 'text'" placeholder="password" formControlName="password" required>
+            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+            <mat-error *ngIf="password.invalid">
+                Bruh
+            </mat-error>
+
+        </mat-form-field>
+        <mat-form-field appearance="legacy">
+            <input matInput placeholder="email" formControlName="email">
+            <mat-error *ngIf="email.invalid">
+                Bruh
+            </mat-error>
+        </mat-form-field>
+        <br> <br>
+        <button mat-raised-button [disabled]="addForm.invalid"> Add User</button>
+    </form>
+</div>
